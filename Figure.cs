@@ -10,20 +10,24 @@ namespace OOP_Chess_IT1A
         private List<string> letters = new List<string>() { "A", "B", "C", "D", "E", "F", "G", "H" };
         private string position;
 
-        public FigureType Type { get; set; }
+        public FigureType Type { get; }
         public string Position
         {
             set
             {
                 if (string.IsNullOrEmpty(value))    //hodnota v proměnné value je null nebo ""
                 {
-                    throw new Exception("Figure postion value can't be empty string or null value!");
+                    position = value; //figura je mimo šachovnici
                 }
                 else if (value.Length == 2)
                 {
-                    if (letters.Contains(value.Substring(0, 1)) && numbers.Contains(value.Substring(1,1)))  //druhý znak v proměnné value je v listu numbers
+                    if (letters.Contains(value.Substring(0, 1).ToUpper()) && numbers.Contains(value.Substring(1,1)))  //druhý znak v proměnné value je v listu numbers
                     {
-
+                        position = value;
+                    }
+                    else
+                    {
+                        throw new Exception("Figure postion value has to be 2 letters valid chess postion!");
                     }
                 }
                 else
@@ -33,12 +37,18 @@ namespace OOP_Chess_IT1A
             }
             get => position;
         }
+        public FigureColor Color { get; }
 
-        public Figure()
+        public Figure(FigureType type, FigureColor color)
         {
-            Position = "A2";
-            Position = "a2";
-            Position = "sdfsdf";
+            Type = type;
+            Color = color;
+        }
+        public Figure(FigureType type, string position, FigureColor color)
+        {
+            Type = type;
+            Position = position;
+            Color = color;
         }
     }
 
@@ -52,5 +62,11 @@ namespace OOP_Chess_IT1A
         Bishop,     //střelec
         Queen,      //dáma
         King        //král
+    }
+
+    public enum FigureColor
+    {
+        white,
+        black
     }
 }
