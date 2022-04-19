@@ -50,6 +50,11 @@ namespace OOP_Chess_IT1A
             Position = position;
             Color = color;
         }
+
+        public override string ToString()
+        {
+            return Type.ToString();
+        }
     }
 
 
