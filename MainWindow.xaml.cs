@@ -25,6 +25,18 @@ namespace OOP_Chess_IT1A
         public MainWindow()
         {
             InitializeComponent();
+            figures = CreateFigures();
+
+            lblBoard.Text = "";
+            foreach(Figure figure in figures)
+            {
+                lblBoard.Text += figure.ToString() + "\n";
+            }
+            CreateBoard();
+        }
+
+        public List<Figure> CreateFigures()
+        {
             figures = new List<Figure>();
 
             figures.Add(new Figure(FigureType.Rook, "A8", FigureColor.black));
@@ -64,14 +76,10 @@ namespace OOP_Chess_IT1A
             figures.Add(new Figure(FigureType.Pawn, "D2", FigureColor.white));
             figures.Add(new Figure(FigureType.Pawn, "E2", FigureColor.white));
 
-            lblBoard.Text = "";
-            foreach(Figure figure in figures)
-            {
-                lblBoard.Text += figure.ToString() + "\n";
-            }
+            return figures;
         }
-
-        public void DrawBoard()
+        
+        public void CreateBoard()
         {
             for (int i = 0; i < 8; i++)
             {
