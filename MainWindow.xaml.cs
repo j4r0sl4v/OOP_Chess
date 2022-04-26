@@ -71,11 +71,20 @@ namespace OOP_Chess_IT1A
             }
         }
 
-        public void DrawBoard(Canvas canvas)
+        public void DrawBoard()
         {
-            Rectangle rectangle = new Rectangle();
-            rectangle.Width = canvas.Width / 8;
-            rectangle.Height = canvas.Height / 8;
+            for (int i = 0; i < 8;i++)
+            ChessboardGrid.ColumnDefinitions.Add(new ColumnDefinition()
+            {
+                Width = new GridLength(1, GridUnitType.Star)
+
+            });
+
+            ChessboardGrid.RowDefinitions.Add(new RowDefinition()
+            {
+                Height = new GridLength(1, GridUnitType.Star)
+
+            });
         }
     }
 }
