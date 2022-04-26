@@ -73,18 +73,21 @@ namespace OOP_Chess_IT1A
 
         public void DrawBoard()
         {
-            for (int i = 0; i < 8;i++)
-            ChessboardGrid.ColumnDefinitions.Add(new ColumnDefinition()
+            for (int i = 0; i < 8; i++)
             {
-                Width = new GridLength(1, GridUnitType.Star)
+                ChessboardGrid.ColumnDefinitions.Add(new ColumnDefinition()
+                {
+                    Width = new GridLength(1, GridUnitType.Star)
 
-            });
+                });
 
-            ChessboardGrid.RowDefinitions.Add(new RowDefinition()
-            {
-                Height = new GridLength(1, GridUnitType.Star)
+                ChessboardGrid.RowDefinitions.Add(new RowDefinition()
+                {
+                    Height = new GridLength(1, GridUnitType.Star)
 
-            });
+                });
+            }
+            ChessboardGrid.ShowGridLines = true;
         }
     }
 }
