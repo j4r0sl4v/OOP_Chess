@@ -53,7 +53,7 @@ namespace OOP_Chess_IT1A
 
         public override string ToString()
         {
-            return Color.ToString()+ "" + Type.ToString().Substring(0,1) + position.ToLower();
+            return Color.ToString() + "" + Type.ToString() + "-" + position.ToLower();
         }
     }
 
