@@ -102,8 +102,8 @@ namespace OOP_Chess_IT1A
                      rectangle.HorizontalAlignment = HorizontalAlignment.Stretch;
                      rectangle.VerticalAlignment = VerticalAlignment.Stretch;
                      rectangle.Fill = new SolidColorBrush(Color.FromRgb (255, 255, 128));
-                     Grid.SetColumn(rectangle, 3);
-                     Grid.SetRow(rectangle, 2);
+                     Grid.SetColumn(rectangle, x);
+                     Grid.SetRow(rectangle, y);
                      ChessboardGrid.Children.Add(rectangle);
                     }
                 }
