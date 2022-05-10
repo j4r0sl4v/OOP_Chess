@@ -95,6 +95,13 @@ namespace OOP_Chess_IT1A
 
                 });
             }
+            Rectangle rectangle = new Rectangle();
+            rectangle.HorizontalAlignment = HorizontalAlignment.Stretch;
+            rectangle.VerticalAlignment = VerticalAlignment.Stretch;
+            rectangle.Fill = new SolidColorBrush(Color.FromRgb (255, 255, 128));
+            Grid.SetColumn(rectangle, 3);
+            Grid.SetRow(rectangle, 2);
+            ChessboardGrid.Children.Add(rectangle);
             ChessboardGrid.ShowGridLines = true;
         }
     }
