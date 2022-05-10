@@ -101,7 +101,7 @@ namespace OOP_Chess_IT1A
                     Rectangle rectangle = new Rectangle();
                     rectangle.HorizontalAlignment = HorizontalAlignment.Stretch;
                     rectangle.VerticalAlignment = VerticalAlignment.Stretch;
-                    if ((x+y)% 2 ==0)
+                        if ((x+y)% 2 ==0)
                         {
                             rectangle.Fill = new SolidColorBrush(Color.FromRgb(255, 255, 128));
                         }
