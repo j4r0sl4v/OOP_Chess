@@ -98,18 +98,25 @@ namespace OOP_Chess_IT1A
                 {
                     for(int y = 0; y < 8; y++)
                     {
-                     Rectangle rectangle = new Rectangle();
-                     rectangle.HorizontalAlignment = HorizontalAlignment.Stretch;
-                     rectangle.VerticalAlignment = VerticalAlignment.Stretch;
-                     rectangle.Fill = new SolidColorBrush(Color.FromRgb (255, 255, 128));
-                     Grid.SetColumn(rectangle, x);
-                     Grid.SetRow(rectangle, y);
-                     ChessboardGrid.Children.Add(rectangle);
+                    Rectangle rectangle = new Rectangle();
+                    rectangle.HorizontalAlignment = HorizontalAlignment.Stretch;
+                    rectangle.VerticalAlignment = VerticalAlignment.Stretch;
+                    if ((x+y)% 2 ==0)
+                        {
+                            rectangle.Fill = new SolidColorBrush(Color.FromRgb(255, 255, 128));
+                        }
+                        else
+                        {
+                            rectangle.Fill = new SolidColorBrush(Color.FromRgb(128, 64, 0));
+                        }
+                        Grid.SetColumn(rectangle, x);
+                        Grid.SetRow(rectangle, y);
+                        ChessboardGrid.Children.Add(rectangle);
                     }
                 }
             }
             
-            ChessboardGrid.ShowGridLines = true;
+               //ChessboardGrid.ShowGridLines = true;
         }
     }
 
