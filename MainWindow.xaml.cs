@@ -43,7 +43,14 @@ namespace OOP_Chess_IT1A
 
         public void DrawFigures(List<Figure> figures)
         {
-            //Properties.Resources.
+            Rectangle rectangle = new Rectangle();
+            rectangle.HorizontalAlignment = HorizontalAlignment.Stretch;
+            rectangle.VerticalAlignment = VerticalAlignment.Stretch;
+            rectangle.Fill = new ImageBrush
+            
+            Grid.SetColumn(rectangle, x); //místo x , y budou čísla
+            Grid.SetRow(rectangle, y);
+            ChessboardGrid.Children.Add(rectangle);
         }
         
         
