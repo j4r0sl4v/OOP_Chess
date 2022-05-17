@@ -43,8 +43,9 @@ namespace OOP_Chess_IT1A
 
         public void DrawFigures(List<Figure> figures)
         {
-
+            //Properties.Resources.
         }
+        
         
         public void CreateDictionaries()
         {
