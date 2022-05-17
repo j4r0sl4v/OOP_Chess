@@ -38,23 +38,23 @@ namespace OOP_Chess_IT1A
         }
         public void CreateDictionaries()
         {
-            columns.Add(1, "A");
-            columns.Add(2, "B");
-            columns.Add(3, "C");
-            columns.Add(4, "D");
-            columns.Add(5, "E");
-            columns.Add(6, "F");
-            columns.Add(7, "G");
-            columns.Add(8, "H");
+            columns.Add(0, "A");
+            columns.Add(1, "B");
+            columns.Add(2, "C");
+            columns.Add(3, "D");
+            columns.Add(4, "E");
+            columns.Add(5, "F");
+            columns.Add(6, "G");
+            columns.Add(7, "H");
             
-            rows.Add(1, "A");
-            rows.Add(2, "B");
-            rows.Add(3, "C");
-            rows.Add(4, "D");
-            rows.Add(5, "E");
-            rows.Add(6, "F");
-            rows.Add(7, "G");
-            rows.Add(8, "H");
+            rows.Add(0, "8");
+            rows.Add(1, "7");
+            rows.Add(2, "6");
+            rows.Add(3, "5");
+            rows.Add(4, "4");
+            rows.Add(5, "3");
+            rows.Add(6, "2");
+            rows.Add(7, "1");
         }
 
         public List<Figure> CreateFigures()
