@@ -20,6 +20,8 @@ namespace OOP_Chess_IT1A
     /// </summary>
     public partial class MainWindow : Window
     {
+        Dictionary<int, string> columns = new Dictionary<int, string>();
+        Dictionary<int, string> rows = new Dictionary<int, string>();
         List<Figure> figures;
 
         public MainWindow()
@@ -33,6 +35,26 @@ namespace OOP_Chess_IT1A
                 lblBoard.Text += figure.ToString() + "\n";
             }
             CreateBoard();
+        }
+        public void CreateDictionaries()
+        {
+            columns.Add(1, "A");
+            columns.Add(2, "B");
+            columns.Add(3, "C");
+            columns.Add(4, "D");
+            columns.Add(5, "E");
+            columns.Add(6, "F");
+            columns.Add(7, "G");
+            columns.Add(8, "H");
+            
+            rows.Add(1, "A");
+            rows.Add(2, "B");
+            rows.Add(3, "C");
+            rows.Add(4, "D");
+            rows.Add(5, "E");
+            rows.Add(6, "F");
+            rows.Add(7, "G");
+            rows.Add(8, "H");
         }
 
         public List<Figure> CreateFigures()
@@ -99,6 +121,9 @@ namespace OOP_Chess_IT1A
                     for(int y = 0; y < 8; y++)
                     {
                     Rectangle rectangle = new Rectangle();
+                    rectangle.Stroke = new SolidColorBrush(Colors.Black);
+                        rectangle.StrokeThickness = 3;
+                        rectangle.Margin = new Thickness(-1.5);
                     rectangle.HorizontalAlignment = HorizontalAlignment.Stretch;
                     rectangle.VerticalAlignment = VerticalAlignment.Stretch;
                         if ((x+y)% 2 ==0)
