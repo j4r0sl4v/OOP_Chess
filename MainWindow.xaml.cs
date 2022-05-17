@@ -29,13 +29,23 @@ namespace OOP_Chess_IT1A
             InitializeComponent();
             figures = CreateFigures();
 
+            
+            CreateDictionaries();
+
             lblBoard.Text = "";
             foreach(Figure figure in figures)
             {
                 lblBoard.Text += figure.ToString() + "\n";
             }
             CreateBoard();
+            DrawFigures(figures);
         }
+
+        public void DrawFigures(List<Figure> figures)
+        {
+
+        }
+        
         public void CreateDictionaries()
         {
             columns.Add(0, "A");
