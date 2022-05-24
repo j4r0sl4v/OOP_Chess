@@ -66,7 +66,7 @@ namespace OOP_Chess_IT1A
                     }
                     else
                     {
-                        return Properties.Resources.BlackRook;
+                        return Properties.Resources.BlackPawn;
                     }
                 }
                 else
@@ -93,7 +93,7 @@ namespace OOP_Chess_IT1A
                     }
                     else
                     {
-                        return Properties.Resources.WhiteRook;
+                        return Properties.Resources.WhitePawn;
                     }
                 }
             }
