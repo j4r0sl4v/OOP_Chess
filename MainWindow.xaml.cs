@@ -46,10 +46,10 @@ namespace OOP_Chess_IT1A
             Rectangle rectangle = new Rectangle();
             rectangle.HorizontalAlignment = HorizontalAlignment.Stretch;
             rectangle.VerticalAlignment = VerticalAlignment.Stretch;
-            rectangle.Fill = new ImageBrush
-            
-            Grid.SetColumn(rectangle, x); //místo x , y budou čísla
-            Grid.SetRow(rectangle, y);
+            //rectangle.Fill = new ImageBrush(getImage(Properties.Resources.WhiteQueen));
+
+            Grid.SetColumn(rectangle, 0);
+            Grid.SetRow(rectangle, 5);
             ChessboardGrid.Children.Add(rectangle);
         }
         
