@@ -56,9 +56,11 @@ namespace OOP_Chess_IT1A
             rectangle.HorizontalAlignment = HorizontalAlignment.Stretch;
             rectangle.VerticalAlignment = VerticalAlignment.Stretch;
             rectangle.Fill = new ImageBrush(getImage(figure.Resource));
+            int indexcol = columns[figure.Position.Substring(0, 1)];
+            int indexrow = rows[figure.Position.Substring(1, 1)];
 
-            Grid.SetColumn(rectangle, 3);
-            Grid.SetRow(rectangle, 7);
+            Grid.SetColumn(rectangle, indexcol);
+            Grid.SetRow(rectangle, indexrow);
             ChessboardGrid.Children.Add(rectangle);
         }
 
@@ -74,7 +76,7 @@ namespace OOP_Chess_IT1A
         public void CreateDictionaries()
         {
             columns.Add("A", 0);
-            columns.Add("B", 1 );
+            columns.Add("B", 1);
             columns.Add("C", 2);
             columns.Add("D", 3);
             columns.Add("E", 4);

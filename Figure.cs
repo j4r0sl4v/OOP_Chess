@@ -60,6 +60,10 @@ namespace OOP_Chess_IT1A
                     {
                         return Properties.Resources.BlackKnight;
                     }
+                    else if (Type == FigureType.Rook)
+                    {
+                        return Properties.Resources.BlackRook;
+                    }
                     else
                     {
                         return Properties.Resources.BlackRook;
@@ -82,6 +86,10 @@ namespace OOP_Chess_IT1A
                     else if (Type == FigureType.Knight)
                     {
                         return Properties.Resources.WhiteKnight;
+                    }
+                    else if (Type == FigureType.Rook)
+                    {
+                        return Properties.Resources.WhiteRook;
                     }
                     else
                     {
