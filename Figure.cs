@@ -93,7 +93,7 @@ namespace OOP_Chess_IT1A
                     }
                     else
                     {
-                        return Properties.Resources.WhitePawn;
+                        return Properties.Resources.WhitPawn;
                     }
                 }
             }
