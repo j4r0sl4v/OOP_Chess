@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,19 +42,35 @@ namespace OOP_Chess_IT1A
             DrawFigures(figures);
         }
 
-        public void DrawFigures(List<Figure> figures)
+        private void DrawFigures(List<Figure> figures)
+        {
+           foreach(var figure in figures)
+            {
+                Drawfigure(figure);
+            }
+        }
+         
+        private void Drawfigure(Figure figure)
         {
             Rectangle rectangle = new Rectangle();
             rectangle.HorizontalAlignment = HorizontalAlignment.Stretch;
             rectangle.VerticalAlignment = VerticalAlignment.Stretch;
-            //rectangle.Fill = new ImageBrush(getImage(Properties.Resources.WhiteQueen));
+            rectangle.Fill = new ImageBrush(getImage(figure.Resource));
 
-            Grid.SetColumn(rectangle, 0);
-            Grid.SetRow(rectangle, 5);
+            Grid.SetColumn(rectangle, 3);
+            Grid.SetRow(rectangle, 7);
             ChessboardGrid.Children.Add(rectangle);
         }
-        
-        
+
+        private ImageSource getImage(byte[] resources)
+        {
+            MemoryStream memoryStream = new MemoryStream(resources);
+            BitmapFrame bitmapFrame = BitmapFrame.Create(memoryStream);
+            Image image = new Image();
+            image.Source = bitmapFrame;
+            return image.Source;
+        }
+
         public void CreateDictionaries()
         {
             columns.Add(0, "A");

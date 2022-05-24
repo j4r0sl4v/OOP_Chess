@@ -38,6 +38,58 @@ namespace OOP_Chess_IT1A
             get => position;
         }
         public FigureColor Color { get; }
+        public byte[] Resource
+        {
+            get
+            {
+                if(Color == FigureColor.black)
+                {
+                    if (Type == FigureType.Queen)
+                    {
+                        return Properties.Resources.BlackQueen;
+                    }
+                    else if (Type == FigureType.King)
+                    {
+                        return Properties.Resources.BlackKing;
+                    }
+                    else if (Type == FigureType.Bishop)
+                    {
+                        return Properties.Resources.BlackBishop;
+                    }
+                    else if (Type == FigureType.Knight)
+                    {
+                        return Properties.Resources.BlackKnight;
+                    }
+                    else
+                    {
+                        return Properties.Resources.BlackRook;
+                    }
+                }
+                else
+                {
+                    if (Type == FigureType.Queen)
+                    {
+                        return Properties.Resources.WhiteQueen;
+                    }
+                    else if (Type == FigureType.King)
+                    {
+                        return Properties.Resources.WhiteKing;
+                    }
+                    else if (Type == FigureType.Bishop)
+                    {
+                        return Properties.Resources.WhiteBishop;
+                    }
+                    else if (Type == FigureType.Knight)
+                    {
+                        return Properties.Resources.WhiteKnight;
+                    }
+                    else
+                    {
+                        return Properties.Resources.WhiteRook;
+                    }
+                }
+            }
+        }
 
         public Figure(FigureType type, FigureColor color)
         {
