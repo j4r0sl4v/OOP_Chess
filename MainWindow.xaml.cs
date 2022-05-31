@@ -24,6 +24,7 @@ namespace OOP_Chess_IT1A
         Dictionary<string, int> columns = new Dictionary<string, int>();
         Dictionary<string, int> rows = new Dictionary<string, int>();
         List<Figure> figures;
+        Figure selectedfigure;
 
         public MainWindow()
         {
@@ -71,9 +72,22 @@ namespace OOP_Chess_IT1A
         {
             Rectangle rectangle = (Rectangle)sender;
             Figure figure = (Figure)rectangle.Tag;
-            rectangle.Margin = new Thickness(0);
-            rectangle.Stroke = new SolidColorBrush(Colors.Lime);
-            rectangle.StrokeThickness = 5;
+            if(selectedfigure == null)
+            {
+                selectedfigure = figure;
+                rectangle.Margin = new Thickness(0);
+                rectangle.Stroke = new SolidColorBrush(Colors.Lime);
+                rectangle.StrokeThickness = 5;
+            }
+            else if (selectedfigure == figure)
+            {
+                rectangle.StrokeThickness = 0;
+                selectedfigure = null;
+            }
+            else
+            {
+
+            }
             //MessageBox.Show($"click on {figure}");
         }
         
