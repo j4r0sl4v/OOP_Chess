@@ -62,6 +62,16 @@ namespace OOP_Chess_IT1A
             Grid.SetColumn(rectangle, indexcol);
             Grid.SetRow(rectangle, indexrow);
             ChessboardGrid.Children.Add(rectangle);
+
+            rectangle.Tag = figure;
+            rectangle.MouseDown += RectangleMouseDown;
+        }
+
+        private void RectangleMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Rectangle rectangle = (Rectangle)sender;
+            Figure figure = (Figure)rectangle.Tag;
+            MessageBox.Show($"click on {figure}");
         }
 
         private ImageSource getImage(byte[] resources)
