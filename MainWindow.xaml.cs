@@ -82,6 +82,7 @@ namespace OOP_Chess_IT1A
             else if (selectedfigure == figure)
             {
                 rectangle.StrokeThickness = 0;
+                rectangle.Margin = new Thickness(5);
                 selectedfigure = null;
             }
             else
