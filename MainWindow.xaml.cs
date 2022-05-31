@@ -71,9 +71,12 @@ namespace OOP_Chess_IT1A
         {
             Rectangle rectangle = (Rectangle)sender;
             Figure figure = (Figure)rectangle.Tag;
-            MessageBox.Show($"click on {figure}");
+            rectangle.Margin = new Thickness(0);
+            rectangle.Stroke = new SolidColorBrush(Colors.Lime);
+            rectangle.StrokeThickness = 5;
+            //MessageBox.Show($"click on {figure}");
         }
-
+        
         private ImageSource getImage(byte[] resources)
         {
             MemoryStream memoryStream = new MemoryStream(resources);
