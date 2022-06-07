@@ -56,6 +56,7 @@ namespace OOP_Chess_IT1A
             Rectangle rectangle = new Rectangle();
             rectangle.HorizontalAlignment = HorizontalAlignment.Stretch;
             rectangle.VerticalAlignment = VerticalAlignment.Stretch;
+            rectangle.Margin = new Thickness(5);
             rectangle.Fill = new ImageBrush(getImage(figure.Resource));
             int indexcol = columns[figure.Position.Substring(0, 1)];
             int indexrow = rows[figure.Position.Substring(1, 1)];
@@ -72,7 +73,7 @@ namespace OOP_Chess_IT1A
         {
             Rectangle rectangle = (Rectangle)sender;
             Figure figure = (Figure)rectangle.Tag;
-            if(selectedfigure == null)
+            if (selectedfigure == null)
             {
                 selectedfigure = figure;
                 rectangle.Margin = new Thickness(0);
